@@ -155,7 +155,7 @@
                         </div>
                     </div>
                     <button class="flex bg-green-100 rounded-md px-5 h-12"><img src="./images/seat-green.png" alt="">
-                        <span class="text-2xl font-bold px-2">40 </span> <span class="text-xl font-normal"> Seats
+                        <span id="ticket-seat-left" class="text-2xl font-bold px-2">40 </span> <span class="text-xl font-normal"> Seats
                             Left</span></button>
                 </div>
                 <div class=" text-center justify-center items-center  flex-col lg:flex-row ">
@@ -198,18 +198,18 @@
                         <!-- seat 1 -->
                         <div class="flex items-center justify-center mb-4">
                             <h3 class=" text-xl font-semibold mr-16">A</h3>
-                            <button class=" w-24 h-14 btn mr-6"><span class="">A1</span></button>
-                            <button class=" w-24 h-14 btn mr-20"><span class="">A2</span></button>
-                            <button class=" w-24 h-14 btn mr-6"><span class="">A3</span></button>
-                            <button class=" w-24 h-14 btn"><span class="">A4</span></button>
+                            <button id="A1" onclick="seatBtnAction()" class=" w-24 h-14 btn mr-6"><span class="">A1</span></button>
+                            <button id="A2" class=" w-24 h-14 btn mr-20"><span class="">A2</span></button>
+                            <button id="A3" class=" w-24 h-14 btn mr-6"><span class="">A3</span></button>
+                            <button id="A4" class=" w-24 h-14 btn"><span class="">A4</span></button>
                         </div>
                         <!-- seat 2 b -->
                         <div class="flex items-center justify-center mb-4">
                             <h3 class=" text-xl font-semibold mr-16">B</h3>
-                            <button class=" w-24 h-14 btn mr-6"><span class="">B1</span></button>
-                            <button class=" w-24 h-14 btn mr-20"><span class="">B2</span></button>
-                            <button class=" w-24 h-14 btn mr-6"><span class="">B3</span></button>
-                            <button class=" w-24 h-14 btn"><span class="">B4</span></button>
+                            <button id="B1" class=" w-24 h-14 btn mr-6"><span class="">B1</span></button>
+                            <button id="B2" class=" w-24 h-14 btn mr-20"><span class="">B2</span></button>
+                            <button id="B3" class=" w-24 h-14 btn mr-6"><span class="">B3</span></button>
+                            <button id="B4" class=" w-24 h-14 btn"><span class="">B4</span></button>
                         </div>
                         <!-- seat 3c -->
                         <div class="flex items-center justify-center mb-4">
@@ -283,7 +283,7 @@
                             <!-- selected seat div -->
                             <div class="">
                                 <div class="flex justify-evenly">
-                                    <h4 class="text-xl font-medium">Seat <span class="bg-green-500 px-2 py-1 rounded-md">4</span></h4>
+                                    <h4 class="text-xl font-medium">Seat <span id="ticket-added"   class="bg-green-500 px-2 py-1 rounded-md">4</span></h4>
                                     <h4 class="text-xl font-medium">Class</h4>
                                     <h4 class="text-xl font-medium">Price</h4>
                                 </div>
