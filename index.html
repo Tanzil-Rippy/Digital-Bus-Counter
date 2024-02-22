@@ -31,51 +31,52 @@
 </head>
 
 <body class=" mx-4 lg:mx-[135px]">
+    <!-- nav -->
+    <nav>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Item 1</a></li>
+                        <li>
+                            <a>Parent</a>
+                            <ul class="p-2">
+                                <li><a>Submenu 1</a></li>
+                                <li><a>Submenu 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-3xl font-bold">P Poriboho</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 ">
+                    <li class="mx-5">Home</li>
+                    <li class="mx-5">About</li>
+                    <li class="mx-5">Destination</li>
+                    <li class="mx-5">Search</li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn bg-green-100 text-green-700">Bus <i class="fa-solid fa-van-shuttle"></i></a>
+            </div>
+        </div>
+    </nav>
     <!-- header section -->
     <header id="header" class="">
         <!-- nav bar -->
-        <nav>
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </div>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <a>Parent</a>
-                                <ul class="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a>Item 3</a></li>
-                        </ul>
-                    </div>
-                    <a class="btn btn-ghost text-3xl font-bold">P Poriboho</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1 ">
-                        <li class="mx-5">Home</li>
-                        <li class="mx-5">About</li>
-                        <li class="mx-5">Destination</li>
-                        <li class="mx-5">Search</li>
-                    </ul>
-                </div>
-                <div class="navbar-end">
-                    <a class="btn bg-green-100 text-green-700">Bus <i class="fa-solid fa-van-shuttle"></i></a>
-                </div>
-            </div>
-        </nav>
+        
         <!-- nav end banner start -->
         <section class="my-4">
-
             <div class="hero rounded-xl " style="background-image: url(./images/banner.png);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center text-neutral-content">
@@ -85,14 +86,10 @@
                         <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
                             exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                         
-                            <button  id="banner-btn" class="btn btn-primary bg-green-600">Buy Tickets</button>
-                        
+                            <button onclick="hideAndShow()" id="banner-btn" class="btn btn-primary bg-green-600">Buy Tickets</button>                        
                     </div>
                 </div>
-
             </div>
-
-
         </section>
         <!-- offer and cuppon section -->
         <section>
@@ -199,17 +196,17 @@
                         <div class="flex items-center justify-center mb-4">
                             <h3 class=" text-xl font-semibold mr-16">A</h3>
                             <button id="A1" onclick="seatBtnAction()" class=" w-24 h-14 btn mr-6"><span class="">A1</span></button>
-                            <button id="A2" class=" w-24 h-14 btn mr-20"><span class="">A2</span></button>
-                            <button id="A3" class=" w-24 h-14 btn mr-6"><span class="">A3</span></button>
-                            <button id="A4" class=" w-24 h-14 btn"><span class="">A4</span></button>
+                            <button id="A2" onclick="seatBtnAction2()" class=" w-24 h-14 btn mr-20"><span class="">A2</span></button>
+                            <button id="A3" onclick="seatBtnAction3()" class=" w-24 h-14 btn mr-6"><span class="">A3</span></button>
+                            <button id="A4" onclick="seatBtnAction4()" class=" w-24 h-14 btn"><span class="">A4</span></button>
                         </div>
                         <!-- seat 2 b -->
                         <div class="flex items-center justify-center mb-4">
                             <h3 class=" text-xl font-semibold mr-16">B</h3>
-                            <button id="B1" class=" w-24 h-14 btn mr-6"><span class="">B1</span></button>
-                            <button id="B2" class=" w-24 h-14 btn mr-20"><span class="">B2</span></button>
-                            <button id="B3" class=" w-24 h-14 btn mr-6"><span class="">B3</span></button>
-                            <button id="B4" class=" w-24 h-14 btn"><span class="">B4</span></button>
+                            <button id="B1" onclick="seatBtnAction5()" class=" w-24 h-14 btn mr-6"><span class="">B1</span></button>
+                            <button id="B2" onclick="seatBtnAction6()" class=" w-24 h-14 btn mr-20"><span class="">B2</span></button>
+                            <button id="B3" onclick="seatBtnAction7()" class=" w-24 h-14 btn mr-6"><span class="">B3</span></button>
+                            <button id="B4" onclick="seatBtnAction8()" class=" w-24 h-14 btn"><span class="">B4</span></button>
                         </div>
                         <!-- seat 3c -->
                         <div class="flex items-center justify-center mb-4">
@@ -283,23 +280,65 @@
                             <!-- selected seat div -->
                             <div class="">
                                 <div class="flex justify-evenly">
-                                    <h4 class="text-xl font-medium">Seat <span id="ticket-added"   class="bg-green-500 px-2 py-1 rounded-md">4</span></h4>
+                                    <h4 class="text-xl font-medium">Seat <span id="ticket-added"   class="bg-green-500 px-2 py-1 rounded-md">0</span></h4>
                                     <h4 class="text-xl font-medium">Class</h4>
                                     <h4 class="text-xl font-medium">Price</h4>
                                 </div>
                             </div>
                             <div class="my-4">
                                 <div class="flex justify-evenly">
-                                    <h4 class="">Seat</h4>
-                                    <h4>Economy</h4>
-                                    <h4 class="">550</h4>
+                                    <h4 class=""><span id="booked-seat-1"> </span></h4>
+                                    <h4><span id="economy-1"></span></h4>
+                                    <h4 class=""><span id="ticket-price-1"></span></h4>
                                 </div>
                             </div>
-                            <div class="mb-2">
+                            <div class="my-4">
                                 <div class="flex justify-evenly">
-                                    <h4 class="">Seat</h4>
-                                    <h4>Economy</h4>
-                                    <h4 class="">550</h4>
+                                    <h4 class=""><span id="booked-seat-2"> </span></h4>
+                                    <h4><span id="economy-2"></span></h4>
+                                    <h4 class=""><span id="ticket-price-2"></span></h4>
+                                </div>
+                            </div>
+                            <div class="my-4">
+                                <div class="flex justify-evenly">
+                                    <h4 class=""><span id="booked-seat-3"> </span></h4>
+                                    <h4><span id="economy-3"></span></h4>
+                                    <h4 class=""><span id="ticket-price-3"></span></h4>
+                                </div>
+                            </div> 
+                            <div class="my-4">
+                                <div class="flex justify-evenly">
+                                    <h4 class=""><span id="booked-seat-4"> </span></h4>
+                                    <h4><span id="economy-4"></span></h4>
+                                    <h4 class=""><span id="ticket-price-4"></span></h4>
+                                </div>
+                            </div>
+                            <div class="my-4">
+                                <div class="flex justify-evenly">
+                                    <h4 class=""><span id="booked-seat-5"> </span></h4>
+                                    <h4><span id="economy-5"></span></h4>
+                                    <h4 class=""><span id="ticket-price-5"></span></h4>
+                                </div>
+                            </div>
+                            <div class="my-4">
+                                <div class="flex justify-evenly">
+                                    <h4 class=""><span id="booked-seat-6"> </span></h4>
+                                    <h4><span id="economy-6"></span></h4>
+                                    <h4 class=""><span id="ticket-price-6"></span></h4>
+                                </div>
+                            </div>
+                            <div class="my-4">
+                                <div class="flex justify-evenly">
+                                    <h4 class=""><span id="booked-seat-7"> </span></h4>
+                                    <h4><span id="economy-7"></span></h4>
+                                    <h4 class=""><span id="ticket-price-7"></span></h4>
+                                </div>
+                            </div>
+                            <div class="my-4">
+                                <div class="flex justify-evenly">
+                                    <h4 class=""><span id="booked-seat-8"> </span></h4>
+                                    <h4><span id="economy-8"></span></h4>
+                                    <h4 class=""><span id="ticket-price-8"></span></h4>
                                 </div>
                             </div>
                             <hr>
@@ -307,7 +346,7 @@
                                 <div class="flex justify-evenly">
                                     <h4 class="text-xl font-medium">Total</h4>
                                     <h4></h4>
-                                    <h4 class="text-xl font-medium">BDT <span>1100</span></h4>
+                                    <h4 class="text-base font-medium">BDT <span id="total-price" class="text-2xl font-semibold text-red-600">0</span></h4>
                                 </div>
                             </div>
                             <!-- cupon input -->
@@ -364,7 +403,10 @@
             <button class="btn btn-wide bg-green-500 mt-6">Continue</button>
         </div>
     </section>
+    <script src="extea.js"></script>
+    <script src="usefull .js"></script>
     <script src="js.js"></script>
+    <!-- <script src="extea.js"></script> -->
 </body>
 
 </html>
