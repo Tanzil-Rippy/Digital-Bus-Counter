@@ -27,8 +27,8 @@ document.getElementById("number-input").addEventListener("input", function() {
 // congrass
 function hideAndShow2() {
     let grandtotal = getTextElementValueById('grand-total')
-    if(grandtotal >2200){
-        alert('YOU CANT BUY MORE THAN 4')
+    if(seatCount >4){
+        alert('YOU CANT BUY MORE THAN 4 Seat AT A TIME')
     }
 else{
     hideElementById('header');

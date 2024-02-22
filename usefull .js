@@ -7,7 +7,7 @@ let count5 = 1
 let count6 = 1
 let count7 = 1
 let count8 = 1
-
+let seatCount = 0
 // function cuponPlay(){
 //     let inpputCupon =Document.getElementById('cupon-input')
 // let cupon15 = inpputCupon.value;
@@ -44,8 +44,7 @@ function seatBtnAction() {
         totalPrice = totalPrice + 550
         setTextElementValueById('total-price', totalPrice)
 
-        
-      
+
     //   grand total update
     setTextElementValueById('grand-total',totalPrice)
     let grandtotal = getTextElementValueById('grand-total')
