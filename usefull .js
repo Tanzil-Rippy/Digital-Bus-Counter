@@ -44,7 +44,7 @@ function seatBtnAction() {
         totalPrice = totalPrice + 550
         setTextElementValueById('total-price', totalPrice)
 
-
+        
     //   grand total update
     setTextElementValueById('grand-total',totalPrice)
     let grandtotal = getTextElementValueById('grand-total')
@@ -469,14 +469,16 @@ function seatBtnAction8() {
 document.getElementById("apply-btn").addEventListener("click", function() {
     let totalPrice = getTextElementValueById('total-price')
     let inputValue = document.getElementById("cupon-input").value;
-   if(inputValue === 'NEW 15'){
+   if(inputValue === 'NEW15'){
     //   grand total update
+    hideElementById('cupon-div')
     setTextElementValueById('grand-total',totalPrice)
     let grandtotal = getTextElementValueById('grand-total')
     grandtotal =grandtotal*0.85
     setTextElementValueById('grand-total',grandtotal)
-   }else if(inputValue === 'NEW 20'){
+   }else if(inputValue === 'Couple 20'){
     //   grand total update
+    hideElementById('cupon-div')
     setTextElementValueById('grand-total',totalPrice)
     let grandtotal = getTextElementValueById('grand-total')
     grandtotal =grandtotal*0.8
